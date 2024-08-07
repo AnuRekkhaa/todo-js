@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+    font-family: Georgia;
+}
+.container{
+    width: 100%;
+    min-height: 1100px;
+    background: lightgoldenrodyellow;
+    padding: 10px;
+}
+.todo{
+    width: 50%;
+    min-height: 600px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px  70px;
+    border-radius: 10px;
+}
+.todo h1{
+    color: rgb(0, 45, 109);
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(224, 224, 224);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 12px;
+}
+button{
+    border: none;
+    outline: none;
+    background: rgb(243, 75, 75);
+    padding: 16px 50px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 40px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 7px;
+    left: 5px;
+}
+ul li.check{
+    color: rgb(95, 95, 95);
+    text-decoration: line-through;
+}
+ul li.check::before{
+    background-image: url(check.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: rgb(36, 36, 36);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: silver;
+}
